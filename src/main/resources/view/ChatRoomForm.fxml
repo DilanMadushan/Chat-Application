@@ -1,66 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane fx:id="rootNode" prefHeight="800.0" prefWidth="435.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.chatApplication.Controller.ChatRoomFormController">
    <children>
-      <Pane layoutX="1.0" layoutY="-2.0" prefHeight="802.0" prefWidth="450.0">
-         <children>
-            <ScrollPane layoutY="82.0" prefHeight="610.0" prefWidth="450.0">
-              <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="449.0">
-                     <children>
-                        <VBox fx:id="vBox" prefHeight="587.0" prefWidth="437.0" />
-                     </children>
-                  </AnchorPane>
-              </content>
-            </ScrollPane>
-            <Pane layoutX="18.0" layoutY="725.0" prefHeight="44.0" prefWidth="365.0" style="-fx-background-color: white;">
+      <ScrollPane layoutX="1.0" layoutY="82.0" prefHeight="610.0" prefWidth="450.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="612.0" prefWidth="451.0">
                <children>
-                  <TextField fx:id="txtMessage" layoutX="44.0" prefHeight="44.0" prefWidth="255.0" promptText="Tpte a message" style="-fx-background-color: white;" />
-                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="326.0" layoutY="5.0" onMouseClicked="#attachOnAction" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/paper-clip.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="3.0" layoutY="7.0" onMouseClicked="#emojiOnAction" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/icons8-grinning-face-with-big-eyes-48.png" />
-                     </image>
-                  </ImageView>
-                  <Pane layoutX="370.0" layoutY="-5.0" onMouseClicked="#sendOnAction" prefHeight="51.0" prefWidth="65.0">
-                     <children>
-                        <Circle fill="#890620" layoutX="33.0" layoutY="26.0" radius="22.0" stroke="WHITE" strokeType="INSIDE" />
-                        <ImageView fitHeight="22.0" fitWidth="24.0" layoutX="24.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/send-message (2).png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </Pane>
+                  <TextArea fx:id="txtDisplay" layoutX="-1.0" prefHeight="597.0" prefWidth="438.0" />
                </children>
-            </Pane>
-            <Pane layoutX="-1.0" prefHeight="82.0" prefWidth="451.0" style="-fx-background-color: #890620;">
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Pane prefHeight="82.0" prefWidth="451.0" style="-fx-background-color: #890620;">
+         <children>
+            <ImageView fx:id="imgAvatar" fitHeight="65.0" fitWidth="72.0" layoutX="26.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/pngwing.com (1).png" />
+               </image>
+            </ImageView>
+            <Text fx:id="txtName" fill="WHITE" layoutX="125.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chat Room" wrappingWidth="216.8359375">
+               <font>
+                  <Font name="System Bold" size="38.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="14.0" layoutY="723.0" prefHeight="44.0" prefWidth="365.0" style="-fx-background-color: white;">
+         <children>
+            <TextField fx:id="txtMessage" layoutX="44.0" prefHeight="44.0" prefWidth="255.0" promptText="Tpte a message" style="-fx-background-color: white;" />
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="326.0" layoutY="5.0" onMouseClicked="#attachOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/paper-clip.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="3.0" layoutY="7.0" onMouseClicked="#emojiOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8-grinning-face-with-big-eyes-48.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="370.0" layoutY="-5.0" onMouseClicked="#sendOnAction" prefHeight="51.0" prefWidth="65.0">
                <children>
-                  <ImageView fx:id="imgAvatar" fitHeight="65.0" fitWidth="72.0" layoutX="26.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                  <Circle fill="#890620" layoutX="33.0" layoutY="26.0" radius="22.0" stroke="WHITE" strokeType="INSIDE" />
+                  <ImageView fitHeight="22.0" fitWidth="24.0" layoutX="24.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../images/pngwing.com (1).png" />
+                        <Image url="@../images/send-message (2).png" />
                      </image>
                   </ImageView>
-                  <Text fx:id="txtName" fill="WHITE" layoutX="125.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chat Room" wrappingWidth="216.8359375">
-                     <font>
-                        <Font name="System Bold" size="38.0" />
-                     </font>
-                  </Text>
                </children>
             </Pane>
          </children>

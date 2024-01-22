@@ -12,6 +12,8 @@ public class ClientHandler {
     private DataInputStream dataInputStream;
     private String userName;
 
+    private String senderName;
+
     private static ArrayList<ClientHandler> clients = new ArrayList<>();
 
     public ClientHandler(Socket socket) {
@@ -38,7 +40,10 @@ public class ClientHandler {
                     try {
 
                         String message = dataInputStream.readUTF();
-                        System.out.println(message);
+
+                        String[] split = message.split(" :");
+                        senderName = split[0];
+
                         broadcastMessage(message);
 
                     } catch (IOException e) {
@@ -52,7 +57,8 @@ public class ClientHandler {
 
     private void broadcastMessage(String message) throws IOException {
         for (ClientHandler client: clients) {
-            if (!client.userName.equals(message)){
+
+            if (!client.userName.equals(senderName)){
                 client.dataOutputStream.writeUTF(message);
                 client.dataOutputStream.flush();
             }

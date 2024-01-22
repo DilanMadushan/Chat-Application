@@ -1,6 +1,8 @@
 package lk.ijse.chatApplication.Controller;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -20,6 +22,7 @@ import java.net.Socket;
 public class ChatRoomFormController {
     @FXML
     public TextField txtMessage;
+    public TextArea txtDisplay;
 
     @FXML
     private ImageView imgAvatar;
@@ -70,8 +73,9 @@ public class ChatRoomFormController {
         while (socket.isConnected()){
             try {
                 String message = dataInputStream.readUTF();
-                Text text = new Text(message);
-//                vBox.getChildren().add(text);
+
+//                vBox.getChildren().add(label);
+                txtDisplay.appendText(message+"\n\n");
                 System.out.println(name+" : "+message);
 
             }catch(IOException e){
@@ -85,7 +89,7 @@ public class ChatRoomFormController {
         String message = txtMessage.getText();
         txtMessage.clear();
         try {
-            dataOutputStream.writeUTF(message);
+            dataOutputStream.writeUTF(name+" : "+message);
             dataOutputStream.flush();
 
         }catch (IOException e){
