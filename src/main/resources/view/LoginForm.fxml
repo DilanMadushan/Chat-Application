@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootNode" prefHeight="530.0" prefWidth="373.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.chatApplication.Controller.LoginFormController">
+   <children>
+      <ImageView fx:id="Profile" fitHeight="208.0" fitWidth="209.0" layoutX="83.0" layoutY="49.0" onMouseClicked="#changeAvtarOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pngwing.com (1).png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtName" layoutX="51.0" layoutY="309.0" prefHeight="30.0" prefWidth="287.0" promptText="Name">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton layoutX="128.0" layoutY="412.0" onAction="#joinOnAction" prefHeight="37.0" prefWidth="129.0" style="-fx-background-color: #107DDF; -fx-background-radius: 30;" text="Join" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
