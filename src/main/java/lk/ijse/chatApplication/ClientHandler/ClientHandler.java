@@ -25,6 +25,8 @@ public class ClientHandler {
             userName = dataInputStream.readUTF();
             System.out.println(userName);
             clients.add(this);
+            senderName = userName;
+            broadcastMessage("Server : "+ userName +" Enter the chat");
 
         } catch (IOException e) {
             throw new RuntimeException(e);

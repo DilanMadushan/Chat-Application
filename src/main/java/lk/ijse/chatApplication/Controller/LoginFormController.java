@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -63,11 +64,11 @@ public class LoginFormController {
     @FXML
     void changeAvtarOnAction(MouseEvent event) {
         FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Select Image File");
         File file = fileChooser.showOpenDialog(rootNode.getScene().getWindow());
 
         if (file!=null) {
             filePath = file.getAbsolutePath();
-            Image image = new Image(filePath);
             Profile.setImage(new Image(filePath));
         }
 
@@ -76,7 +77,15 @@ public class LoginFormController {
     @FXML
     void joinOnAction(ActionEvent event) throws IOException {
         name = txtName.getText();
+
+        if(name.isEmpty()){
+            new Alert(Alert.AlertType.ERROR,"Please enter your user name").show();
+            return;
+        }
+
         txtName.clear();
+        Profile.setImage(new Image("E:\\ijse Projects\\Chat Application\\Chat Application\\src\\main\\resources" +
+                "\\images\\pngwing.com (1).png"));
 
 
         Parent rootNode = FXMLLoader.load(getClass().getResource("/view/ChatRoomForm.fxml"));
