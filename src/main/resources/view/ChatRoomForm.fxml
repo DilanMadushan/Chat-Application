@@ -1,26 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="rootNode" prefHeight="800.0" prefWidth="435.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.chatApplication.Controller.ChatRoomFormController">
+<AnchorPane fx:id="rootNode" prefHeight="712.0" prefWidth="451.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.chatApplication.Controller.ChatRoomFormController">
    <children>
-      <ScrollPane layoutX="1.0" layoutY="82.0" prefHeight="610.0" prefWidth="450.0">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="612.0" prefWidth="451.0">
-               <children>
-                  <TextArea fx:id="txtDisplay" layoutX="-1.0" prefHeight="597.0" prefWidth="438.0" />
-               </children>
-            </AnchorPane>
-        </content>
+      <ScrollPane layoutY="81.0" prefHeight="541.0" prefWidth="451.0">
+         <content>
+            <VBox fx:id="vBox" prefHeight="542.0" prefWidth="439.0" />
+         </content>
       </ScrollPane>
       <Pane prefHeight="82.0" prefWidth="451.0" style="-fx-background-color: #890620;">
          <children>
@@ -36,7 +32,7 @@
             </Text>
          </children>
       </Pane>
-      <Pane layoutX="14.0" layoutY="723.0" prefHeight="44.0" prefWidth="365.0" style="-fx-background-color: white;">
+      <Pane layoutX="14.0" layoutY="645.0" prefHeight="44.0" prefWidth="365.0" style="-fx-background-color: white;">
          <children>
             <TextField fx:id="txtMessage" layoutX="44.0" prefHeight="44.0" prefWidth="255.0" promptText="Tpte a message" style="-fx-background-color: white;" />
             <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="326.0" layoutY="5.0" onMouseClicked="#attachOnAction" pickOnBounds="true" preserveRatio="true">
