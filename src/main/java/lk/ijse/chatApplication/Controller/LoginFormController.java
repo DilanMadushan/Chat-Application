@@ -30,8 +30,8 @@ public class LoginFormController {
     private JFXTextField txtName;
 
     private ServerSocket serverSocket;
-     static String name;
-     static String filePath;
+    static String name;
+    static String filePath;
 
      public void initialize(){
          try {

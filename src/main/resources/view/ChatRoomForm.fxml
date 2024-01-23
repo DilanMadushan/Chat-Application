@@ -19,7 +19,7 @@
    <children>
       <ScrollPane layoutY="81.0" prefHeight="541.0" prefWidth="451.0">
          <content>
-            <VBox fx:id="vBox" prefHeight="542.0" prefWidth="450.0" />
+            <VBox fx:id="vBox" prefHeight="540.0" prefWidth="437.0" />
          </content>
       </ScrollPane>
       <Pane prefHeight="82.0" prefWidth="451.0" style="-fx-background-color: #890620;">

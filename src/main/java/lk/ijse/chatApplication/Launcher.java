@@ -16,6 +16,7 @@ public class Launcher extends Application {
         Scene scene = new Scene(rootNode);
         stage.setScene(scene);
         stage.centerOnScreen();
+        stage.setTitle("Login");
         stage.show();
     }
 }
