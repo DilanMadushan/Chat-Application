@@ -34,6 +34,7 @@ public class LoginFormController {
     static String filePath;
 
      public void initialize(){
+         txtName.setStyle("-fx-text-fill: White; -fx-font-size: 15; -fx-border-color: white; -fx-background-color:Black");
          try {
              serverSocket = new ServerSocket(999);
          } catch (IOException e) {
@@ -84,8 +85,7 @@ public class LoginFormController {
         }
 
         txtName.clear();
-        Profile.setImage(new Image("E:\\ijse Projects\\Chat Application\\Chat Application\\src\\main\\resources" +
-                "\\images\\pngwing.com (1).png"));
+        Profile.setImage(new Image("/images/user-image-with-black-background.png"));
 
 
         Parent rootNode = FXMLLoader.load(getClass().getResource("/view/ChatRoomForm.fxml"));
@@ -96,5 +96,8 @@ public class LoginFormController {
         stage.centerOnScreen();
         stage.show();
     }
-
+    @FXML
+    public void nameOnAction(ActionEvent event) throws IOException {
+         joinOnAction(event);
+    }
 }

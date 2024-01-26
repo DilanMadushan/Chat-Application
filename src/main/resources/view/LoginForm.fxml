@@ -5,24 +5,45 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="rootNode" prefHeight="530.0" prefWidth="373.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.chatApplication.Controller.LoginFormController">
+<AnchorPane fx:id="rootNode" prefHeight="569.0" prefWidth="373.0" style="-fx-background-color: #d1d8e0;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.chatApplication.Controller.LoginFormController">
    <children>
-      <ImageView fx:id="Profile" fitHeight="208.0" fitWidth="209.0" layoutX="83.0" layoutY="49.0" onMouseClicked="#changeAvtarOnAction" pickOnBounds="true" preserveRatio="true">
+      <Pane prefHeight="569.0" prefWidth="373.0" style="-fx-background-color: #2E8B57;">
+         <children>
+            <ImageView fitHeight="705.0" fitWidth="384.0" layoutX="-5.0" layoutY="-113.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/peakpx (2).jpg" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="95.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SKYNET" wrappingWidth="202.0">
+               <font>
+                  <Font name="System Bold" size="51.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <ImageView fx:id="Profile" fitHeight="208.0" fitWidth="209.0" layoutX="90.0" layoutY="103.0" onMouseClicked="#changeAvtarOnAction" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../images/pngwing.com (1).png" />
+            <Image url="@../images/user-image-with-black-background.png" />
          </image>
       </ImageView>
-      <JFXTextField fx:id="txtName" layoutX="51.0" layoutY="309.0" prefHeight="30.0" prefWidth="287.0" promptText="Name">
+      <JFXTextField fx:id="txtName" focusColor="WHITE" layoutX="51.0" layoutY="366.0" onAction="#nameOnAction" prefHeight="30.0" prefWidth="287.0" style="-fx-border-color: white; -jfx-focus-color: white; -fx-background-color: black;" unFocusColor="BLACK">
          <font>
-            <Font size="14.0" />
+            <Font size="15.0" />
          </font>
       </JFXTextField>
-      <JFXButton layoutX="128.0" layoutY="412.0" onAction="#joinOnAction" prefHeight="37.0" prefWidth="129.0" style="-fx-background-color: #107DDF; -fx-background-radius: 30;" text="Join" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="129.0" layoutY="446.0" onAction="#joinOnAction" prefHeight="37.0" prefWidth="129.0" style="-fx-background-radius: 30; -fx-border-color: white;" text="Join" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </JFXButton>
+      <Text fill="WHITE" layoutX="54.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

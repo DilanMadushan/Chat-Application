@@ -17,49 +17,57 @@
 
 <AnchorPane fx:id="rootNode" prefHeight="712.0" prefWidth="451.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.chatApplication.Controller.ChatRoomFormController">
    <children>
-      <ScrollPane layoutY="81.0" prefHeight="541.0" prefWidth="451.0">
+      <ImageView fitHeight="801.0" fitWidth="500.0" layoutY="-89.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/peakpx%20(2).jpg" />
+         </image>
+      </ImageView>
+      <ScrollPane layoutX="27.0" layoutY="86.0" prefHeight="533.0" prefWidth="403.0">
          <content>
-            <VBox fx:id="vBox" prefHeight="540.0" prefWidth="437.0" />
+            <VBox fx:id="vBox" prefHeight="533.0" prefWidth="391.0" />
          </content>
       </ScrollPane>
-      <Pane prefHeight="82.0" prefWidth="451.0" style="-fx-background-color: #890620;">
+      <Pane prefHeight="82.0" prefWidth="451.0">
          <children>
-            <ImageView fx:id="imgAvatar" fitHeight="65.0" fitWidth="72.0" layoutX="26.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgAvatar" fitHeight="70.0" fitWidth="71.0" layoutX="29.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/pngwing.com (1).png" />
+                  <Image url="@../images/icons8-user-100.png" />
                </image>
             </ImageView>
-            <Text fx:id="txtName" fill="WHITE" layoutX="125.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chat Room" wrappingWidth="216.8359375">
+            <Text fx:id="txtName" fill="WHITE" layoutX="155.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SKYNET" wrappingWidth="216.8359375">
                <font>
-                  <Font name="System Bold" size="38.0" />
+                  <Font name="System Bold" size="53.0" />
                </font>
             </Text>
          </children>
       </Pane>
-      <Pane layoutX="14.0" layoutY="645.0" prefHeight="44.0" prefWidth="365.0" style="-fx-background-color: white;">
+      <Pane layoutX="30.0" layoutY="639.0" prefHeight="49.0" prefWidth="351.0" style="-fx-background-color: white;">
          <children>
-            <TextField fx:id="txtMessage" layoutX="44.0" onAction="#messageOnAction" prefHeight="44.0" prefWidth="255.0" promptText="Tpte a message" style="-fx-background-color: white;" />
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="326.0" layoutY="5.0" onMouseClicked="#attachOnAction" pickOnBounds="true" preserveRatio="true">
+            <TextField fx:id="txtMessage" layoutX="46.0" layoutY="2.0" onAction="#messageOnAction" prefHeight="44.0" prefWidth="255.0" promptText="Tpte a message" style="-fx-background-color: white;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></TextField>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="307.0" layoutY="8.0" onMouseClicked="#attachOnAction" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/paper-clip.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="3.0" layoutY="7.0" onMouseClicked="#emojiOnAction" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="4.0" layoutY="7.0" onMouseClicked="#emojiOnAction" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/icons8-grinning-face-with-big-eyes-48.png" />
                </image>
             </ImageView>
          </children>
       </Pane>
-      <JFXButton layoutX="389.0" layoutY="644.0" onAction="#sendOnAction" prefHeight="51.0" prefWidth="52.0">
+      <JFXButton layoutX="385.0" layoutY="638.0" onAction="#sendOnAction" prefHeight="49.0" prefWidth="58.0">
          <font>
             <Font size="1.0" />
          </font>
          <graphic>
             <Pane prefHeight="51.0" prefWidth="50.0">
                <children>
-                  <Circle fill="#890620" layoutX="24.0" layoutY="25.0" radius="22.0" stroke="WHITE" strokeType="INSIDE" />
-                  <ImageView fitHeight="22.0" fitWidth="24.0" layoutX="15.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                  <Circle fill="#17c65d" layoutX="25.0" layoutY="26.0" radius="22.0" stroke="WHITE" strokeType="INSIDE" />
+                  <ImageView fitHeight="22.0" fitWidth="24.0" layoutX="15.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/send-message (2).png" />
                      </image>
@@ -68,7 +76,7 @@
             </Pane>
          </graphic>
       </JFXButton>
-      <Pane fx:id="emojiPane" layoutX="11.0" layoutY="455.0" prefHeight="149.0" prefWidth="228.0">
+      <Pane fx:id="emojiPane" layoutX="35.0" layoutY="449.0" prefHeight="149.0" prefWidth="228.0" style="-fx-background-color: F3F3F3;">
          <children>
             <GridPane layoutX="-1.0" layoutY="-1.0" prefHeight="149.0" prefWidth="228.0">
               <columnConstraints>

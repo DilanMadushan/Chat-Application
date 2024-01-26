@@ -201,8 +201,9 @@ public class ChatRoomFormController {
         try {
             if (path==""){
                 String message = txtMessage.getText();
-                if (message==null){
-                    new Alert(Alert.AlertType.INFORMATION,"Message is empty").show();
+                if (message.isEmpty()){
+                    new Alert(Alert.AlertType.ERROR,"Message is empty").show();
+                    return;
                 }
                 txtMessage.clear();
 
@@ -229,7 +230,7 @@ public class ChatRoomFormController {
                 imageView.setFitWidth(100);
 
                 HBox hBox = new HBox(imageView);
-                hBox.setStyle("-fx-fill-height: true; -fx-min-height: 50; -fx-pref-width: 520; -fx-max-width: 520; -fx-padding: 10; -fx-alignment: center-right;");
+                hBox.setStyle("-fx-fill-height: true; -fx-min-height: 100; -fx-pref-width: 520; -fx-max-width: 520; -fx-padding: 10; -fx-alignment: center-right;");
                 vBox.getChildren().add(hBox);
                 path="";
 
